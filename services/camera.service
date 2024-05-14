@@ -10,7 +10,7 @@ Type=simple
 # EnvironmentFile=/srv/www/environment
 # Environment="FLASK_DEBUG=0"
 # ExecStartPre=
-ExecStart=/usr/bin/python3 /home/pi/services
+ExecStart=/usr/bin/python3 /home/pi/services/raspberrypi-live-camera/src/camera.py
 WorkingDirectory=/home/pi/services
 Restart=always
 
