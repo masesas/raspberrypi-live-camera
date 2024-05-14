@@ -1,0 +1,18 @@
+[Unit]
+Description=Backend flask
+After=network.target
+#Wants=ase.service
+
+[Service]
+User=root
+Group=rouut
+Type=simple
+# EnvironmentFile=/srv/www/environment
+# Environment="FLASK_DEBUG=0"
+# ExecStartPre=
+ExecStart=/usr/bin/python3 /home/pi/services
+WorkingDirectory=/home/pi/services
+Restart=always
+
+[Install]
+WantedBy=multi-user.target
