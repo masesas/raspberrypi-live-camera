@@ -5,7 +5,7 @@ After=network.target
 
 [Service]
 User=root
-Group=rouut
+Group=root
 Type=simple
 # EnvironmentFile=/srv/www/environment
 # Environment="FLASK_DEBUG=0"
