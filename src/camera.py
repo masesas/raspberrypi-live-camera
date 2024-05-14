@@ -4,8 +4,8 @@ import post_ip
 
 app = Flask(__name__)
 port = 5000
+ngrok_ip = post_ip.get_and_post_ip()
 
-post_ip.get_and_post_ip()
 
 def generate_frames(cameraIndex=0):
     camera = cv2.VideoCapture(cameraIndex)
@@ -22,6 +22,15 @@ def generate_frames(cameraIndex=0):
 @app.route("/")
 def index():
     return render_template("index.html")
+
+
+@app.route("/ip")
+def index():
+    return jsonify(
+        {
+            "ip": ngrok_ip,
+        }
+    )
 
 
 @app.route("/video_feed")

@@ -12,7 +12,7 @@ Type=simple
 # ExecStartPre=
 ExecStart=/usr/bin/python3 /home/pi/services/raspberrypi-live-camera/src/camera.py
 WorkingDirectory=/home/pi/services
-Restart=always
+# Restart=always
 
 [Install]
 WantedBy=multi-user.target
