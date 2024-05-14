@@ -25,7 +25,7 @@ def index():
 
 
 @app.route("/ip")
-def index():
+def ip():
     return jsonify(
         {
             "ip": ngrok_ip,
